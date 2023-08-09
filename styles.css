@@ -13,6 +13,10 @@ body {
     background-color: var(--colorGrisFondo);
 }
 
+a{
+    text-decoration: none;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto:wght@100&display=swap');
 
 :root {
@@ -22,19 +26,71 @@ body {
     --colorVioleta: rgb(189, 0, 189);
     --colorNegroFuente: rgb(56, 56, 56);
     --colorGradienteMoradoVioleta: linear-gradient(to right, rgb(41, 0, 41), purple);
+    --colorGrisFuerte: rgb(67, 67, 67);
 }
 
 /*DIMENSIONES*/
 @media(max-width: 550px) {
+    .navbar{
+        background-color: white;
+        border: 0.5px solid var(--colorGrisFondo);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: small;
+        padding: 0 10px 0 10px;
+    }
+    .navbar__buttons{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 5px 0 3px 0;
+    }
+    .navbar__buttons svg{
+        fill: var(--colorGrisFuerte);
+    }
+    .navbar__button-qr{
+        background-color: var(--colorCeleste);
+        padding: 10px 10px 7px 10px;
+        border-radius: 100%;
+       /* border: 12px solid rgb(40, 55, 60);*/
+       box-shadow: 0px 0px 0px 7px rgb(198, 240, 255);
+       margin-bottom: 6px;
+    }
+    .navbar__button-qr svg{
+        fill: black;
+        filter: invert(100%);
+    }
+    .navbar__buttons a{
+        color: var(--colorNegroFuente);
+    }
+    body{
+        padding-bottom: 100px;
+    }
+    .fondoAuxiliar{
+        background-color: var(--colorCeleste);
+        width: 100%;
+        height: 51px;
+        
+    }
+    .encabezado{
+        position: fixed;
+        background-color: var(--colorCeleste);
+        width: 100%;
+        height: max-content;
+        top: 0;
+        height: 51px;
+    }
     header button {
         gap: 7px;
     }
-
+    
     .container {
         font-size: 13px;
-        ;
     }
-
     .encabezado img {
         width: 30px;
         margin-right: 5px;
@@ -102,8 +158,19 @@ body {
 
     .container-secundario {
         padding: 15px 15px 15px 15px;
-        margin: 10px;
-        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    .funcionesExtra{
+        padding-left: 10px;
+    }
+    .tituloAndLogo{
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .espacioFinal{
+        height: 70px;
     }
 }
 
@@ -122,6 +189,8 @@ body {
         width: 300px;
     }
 }
+/*BARRA DE NAVEGACION*/
+
 
 /*HEADER*/
 header button {
@@ -134,7 +203,6 @@ header button {
     color: var(--colorBlanco);
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,10 +236,18 @@ header button svg {
 .container {
     background-color: var(--colorBlanco);
     padding: 20px 10px 20px 10px;
-    margin: 10px;
-    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
     border-radius: 10px;
+}
+
+.sombraFuerte{
     box-shadow: 0px 7px 12px -1px rgba(0, 0, 0, 0.25);
+}
+
+.sombraDebil{
+    box-shadow: 0px 2px 6px -1px rgba(0,0,0,0.54);
 }
 
 .container-secundario {
@@ -300,4 +376,17 @@ header button svg {
 
 .colorGrey {
     fill: grey;
+}
+/*FUNCIONES EXTRA*/
+
+.tituloAndLogo{
+    display: flex;
+}
+.tituloAndLogo p{
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--colorCeleste);
+}
+.espacioFinal{
+    width: 100%;
 }
