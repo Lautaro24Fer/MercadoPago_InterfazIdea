@@ -1,0 +1,303 @@
+/*UNIVERSALES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100vh;
+    background-color: var(--colorGrisFondo);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto:wght@100&display=swap');
+
+:root {
+    --colorGrisFondo: rgb(220, 220, 220);
+    --colorBlanco: #fff;
+    --colorCeleste: rgb(7, 171, 220);
+    --colorVioleta: rgb(189, 0, 189);
+    --colorNegroFuente: rgb(56, 56, 56);
+    --colorGradienteMoradoVioleta: linear-gradient(to right, rgb(41, 0, 41), purple);
+}
+
+/*DIMENSIONES*/
+@media(max-width: 550px) {
+    header button {
+        gap: 7px;
+    }
+
+    .container {
+        font-size: 13px;
+        ;
+    }
+
+    .encabezado img {
+        width: 30px;
+        margin-right: 5px;
+    }
+
+    .saldo-funciones {
+        margin-top: 1em;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    .container__saldo-funciones {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .saldo-funciones button {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .saldo-funciones p {
+        width: max-content;
+    }
+
+    .boton-tarjeta {
+        width: 60%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 15px 20px 15px;
+        border-radius: 4px;
+    }
+
+    .funciones {
+        align-items: center;
+        gap: 5px;
+    }
+
+    .funciones button {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        border: 1px solid rgb(209, 209, 209);
+        background-color: #fff;
+    }
+
+    .container__funciones {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+    }
+
+    .container-secundario {
+        padding: 15px 15px 15px 15px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 550px) {
+
+    /*TABLETS*/
+    .encabezado img {
+        width: 100px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    /*ORDENADORES*/
+    .encabezado img {
+        width: 300px;
+    }
+}
+
+/*HEADER*/
+header button {
+    display: flex;
+    align-items: center;
+}
+
+/*TOP DE LA PANTALLA*/
+.encabezado {
+    color: var(--colorBlanco);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button svg {
+    filter: invert(100%);
+}
+
+.encabezado label {
+    display: flex;
+    align-items: center;
+}
+
+.encabezado button {
+    background-color: rgb(79, 198, 235);
+    color: var(--colorBlanco);
+    border: transparent;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.encabezado button:active {
+    background-color: rgb(60, 146, 173);
+}
+
+.fondo-gradiente {
+    background-image: linear-gradient(rgb(7, 171, 220), rgb(220, 220, 220));
+}
+
+.container {
+    background-color: var(--colorBlanco);
+    padding: 20px 10px 20px 10px;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 12px -1px rgba(0, 0, 0, 0.25);
+}
+
+.container-secundario {
+    border-radius: 5px;
+    background-image: var(--colorGradienteMoradoVioleta);
+}
+
+.container-secundario a {
+    color: var(--colorBlanco);
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.saldo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.saldo-header {
+    display: flex;
+    gap: 10px;
+}
+
+.saldo-tasaInteres {
+    background-color: rgb(213, 255, 213);
+    font-size: small;
+    display: grid;
+    align-items: center;
+    padding: 1px 7px;
+    border-radius: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.movimientos-saldo a {
+    font-size: small;
+    color: var(--colorCeleste);
+    text-decoration: none;
+}
+
+.numero-saldo {
+    display: flex;
+    margin-top: 1em;
+    font-size: 25px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.numero-saldo button {
+    margin-left: 10px;
+    height: min-content;
+    border: transparent;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.saldo-funciones {
+    color: var(--colorNegroFuente);
+}
+
+.saldo-funciones label {
+    display: flex;
+    flex-direction: column;
+    width: min-content
+}
+
+.saldo-funciones button {
+    border-radius: 100%;
+    border: transparent;
+}
+
+.footer-saldo {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-top: 40px;
+}
+
+.boton-tarjeta {
+    background-image: linear-gradient(to right, rgb(7, 171, 220), rgb(60, 184, 222), rgb(152, 210, 227));
+}
+
+.boton-tarjeta img {
+    height: 15px;
+    width: auto;
+}
+
+.footer-saldo label {
+    color: grey;
+}
+
+/*Segundo elemento*/
+.funciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container__funciones {
+    color: var(--colorNegroFuente);
+}
+
+.funciones button svg {
+    filter: brightness(0.8);
+}
+
+.colorBlue svg {
+    fill: var(--colorCeleste);
+}
+
+.colorViolet svg {
+    fill: var(--colorVioleta)
+}
+
+.colorPurple svg {
+    fill: purple;
+}
+
+.colorFuccia svg {
+    fill: fuchsia;
+}
+
+.colorGrey {
+    fill: grey;
+}
